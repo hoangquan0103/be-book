@@ -12,7 +12,7 @@ public class StringUtils {
             return false;
         }
 
-        try{
+        try {
             int page = Integer.parseInt(data);
         } catch (Exception e) {
             return false;
@@ -26,7 +26,7 @@ public class StringUtils {
             return false;
         }
 
-        try{
+        try {
             LocalDate.parse(data);
         } catch (Exception e) {
             return false;
@@ -43,8 +43,7 @@ public class StringUtils {
         return matcher.find();
     }
 
-    public static String getNewPass(int n)
-    {
+    public static String getNewPass(int n) {
 
         // choose a Character random from this String
         String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -59,7 +58,7 @@ public class StringUtils {
             // generate a random number between
             // 0 to AlphaNumericString variable length
             int index
-                    = (int)(AlphaNumericString.length()
+                    = (int) (AlphaNumericString.length()
                     * Math.random());
 
             // add Character one by one in end of sb
@@ -68,10 +67,5 @@ public class StringUtils {
         }
 
         return sb.toString();
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println(validate("longthan366@gmail.com"));
     }
 }

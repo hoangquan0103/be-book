@@ -40,8 +40,4 @@ public class CloudinaryUtils {
         }
     }
 
-
-    public static void main(String[] args) {
-        deleteImg("longthansdfghjk");
-    }
 }
