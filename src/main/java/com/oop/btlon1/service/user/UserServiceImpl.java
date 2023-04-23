@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepo.findByEmail(username);
-        System.out.println("longtv: mail " + username);
+        System.out.println("main-mail " + username);
         if(user == null){
             throw new UsernameNotFoundException("User not found in the database");
         }

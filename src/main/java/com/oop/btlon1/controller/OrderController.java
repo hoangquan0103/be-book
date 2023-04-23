@@ -30,7 +30,7 @@ public class OrderController {
 
     @PostMapping("/book")
     public ResponseEntity<ResponseDTO<?>> orderBook(@RequestBody Order order) {
-        System.out.println("longtv:   "+ order.getBooks().size());
+
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         System.out.println(principal.toString() + " anth order");
         User user = userService.getOneByEmail(principal.toString());
@@ -39,11 +39,11 @@ public class OrderController {
         while(iterable.hasNext()) {
             Book book = iterable.next();
             Book newBook = bookService.getOneById(book.getId());
-            System.out.println("longtv" + newBook.getTotalQuantity());
+
             if (newBook.getTotalQuantity() < order.getQuanityList().get(i)) {
                 return ResponseEntity.ok(new ResponseDTO<>("So luong sach khong con du", "400", ""));
             }
-            System.out.println(newBook.getName() + " longtv book name");
+
             newBook.setBuyCount(newBook.getBuyCount() + order.getQuanityList().get(i));
             newBook.setTotalQuantity(newBook.getTotalQuantity() - order.getQuanityList().get(i));
             bookService.save(newBook);
@@ -91,7 +91,7 @@ public class OrderController {
 
     @PutMapping("/update")
     public void update(@RequestBody State state) {
-        System.out.println("longtv----------" + " " + state.getId());
+
         orderService.update(String.valueOf(state.getId()), state.getStatus());
     }
 

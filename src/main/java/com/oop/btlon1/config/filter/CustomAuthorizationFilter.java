@@ -38,7 +38,7 @@ public class CustomAuthorizationFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
         }else{
             String header = request.getHeader(AUTHORIZATION);
-            System.out.println(header + "longtv");
+
             if(header != null && header.startsWith("Bearer ")){
                 try {
                     String token = header.substring("Bearer ".length());

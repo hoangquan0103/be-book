@@ -21,14 +21,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH");
     }
 
-    @Bean
-    public Docket publicApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.longtv.btlon1"))
-                .paths(PathSelectors.any())
-                .build();
-    }
+//    @Bean
+//    public Docket publicApi() {
+//        return new Docket(DocumentationType.SWAGGER_2)
+//                .select()
+//                .apis(RequestHandlerSelectors.basePackage("com.longtv.btlon1"))
+//                .paths(PathSelectors.any())
+//                .build();
+//    }
 
     @Bean
     public JavaMailSenderImpl mailSender() {
