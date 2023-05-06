@@ -23,4 +23,12 @@ public class Rating {
     private User user;
     private Book book;
     private LocalDate localDate;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

@@ -34,7 +34,6 @@ public class CustomAuthorizationFilter extends OncePerRequestFilter {
                 request.getRequestURI().equals("/api/save") ||
                 request.getRequestURI().equals("/api/forget-password") ||
                 request.getRequestURI().contains("/api/user/active")){
-            System.out.println(request.getRequestURI() + " long long");
             filterChain.doFilter(request, response);
         }else{
             String header = request.getHeader(AUTHORIZATION);
