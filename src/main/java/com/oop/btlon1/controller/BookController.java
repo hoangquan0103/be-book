@@ -73,7 +73,8 @@ public class BookController {
 
     @PostMapping(value ="/save",  produces = {MediaType.IMAGE_PNG_VALUE, MediaType.APPLICATION_JSON_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<ResponseDTO<String>> addBook(@RequestParam(name="file") MultipartFile file, @RequestParam("data") String data) {
-        System.out.println("saveee long");
+
+
         Gson gson = new Gson();
 
         Book book;

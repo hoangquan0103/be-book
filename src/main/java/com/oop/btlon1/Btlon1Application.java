@@ -70,19 +70,19 @@ public class Btlon1Application {
             int checkBook = categoryService.getAll().size();
             if(checkBook == 0) {
 //                List<Category> list = new ArrayList<>();
-                categoryService.save(new Category("The loai 1", LocalDateTime.now()));
-                categoryService.save(new Category("The loai 2", LocalDateTime.now()));
-                categoryService.save(new Category("The loai 3", LocalDateTime.now()));
-                categoryService.save(new Category("The loai 4", LocalDateTime.now()));
+                categoryService.save(new Category("VĂN HỌC", LocalDateTime.now()));
+                categoryService.save(new Category("KINH TẾ", LocalDateTime.now()));
+                categoryService.save(new Category("TÂM LÝ - KỸ NĂNG SỐNG", LocalDateTime.now()));
+                categoryService.save(new Category("NUÔI DẠY CON", LocalDateTime.now()));
+                categoryService.save(new Category("SÁCH THIẾU NHI", LocalDateTime.now()));
+                categoryService.save(new Category("TIỂU SỬ - HỒI KẾT", LocalDateTime.now()));
+                categoryService.save(new Category("GIÁO KHOA - THAM KHẢO", LocalDateTime.now()));
+                categoryService.save(new Category("SÁCH HỌC NGOẠI NGỮ", LocalDateTime.now()));
 
                 System.out.println(categoryService.getAll().size());
                 Set<Category> categories = new HashSet<>(categoryService.getAll());
                 Thread.sleep(1000);
 
-                for (int i = 0; i < 100; i++) {
-                    Book book = new Book(10000, "Kim Dong","One Piece" + i, "Kim Dong", 100, "https://cdn0.fahasa.com/media/catalog/product/i/m/image_217703.jpg", "No desc", LocalDate.now(), categories, 10);
-                    service.save(book);
-                }
             }
         };
     }

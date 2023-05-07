@@ -40,7 +40,7 @@ public class EmailSender implements EmailService {
                     "      </div>",true);
             mimeMessageHelper.setTo(to);
             mimeMessageHelper.setSubject("New passowrd");
-            mimeMessageHelper.setFrom("longthan366@gmail.com");
+            mimeMessageHelper.setFrom("quank71nsl@gmail.com");
             mailSender.send(message);
         }catch(MessagingException e){
             throw new IllegalStateException("Fail to send email");
